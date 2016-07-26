@@ -474,6 +474,7 @@ a {
   font-size: 42px;
   font-family: "Lora Bold";
   color: #3a3f4b;
+  text-transform: uppercase;
 }
 
 .brands__header--line {
@@ -542,9 +543,11 @@ a {
 }
 
 .about-us-wrapper .about-us__header--h2 {
+  padding-top: 70px;
   font-size: 42px;
   font-family: "Lora Bold";
   color: #3a3f4b;
+  text-transform: uppercase;
 }
 
 .about-us-wrapper .about-us__header--line {
@@ -552,4 +555,208 @@ a {
   width: 147px;
   height: 4px;
   background-color: #00a5ff;
+}
+
+.about-us-wrapper .about-us .carousel-wrapper {
+  position: relative;
+}
+
+.about-us-wrapper .about-us .carousel-wrapper .right-arr,
+.about-us-wrapper .about-us .carousel-wrapper .left-arr {
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 30px;
+  background-image: url("../img/arrows.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.about-us-wrapper .about-us .carousel-wrapper .left-arr {
+  left: 0;
+}
+
+.about-us-wrapper .about-us .carousel-wrapper .right-arr {
+  right: 0;
+  background-position: 0 -30px;
+}
+
+.about-us-wrapper .about-us .about-us__carousel {
+  position: relative;
+  width: 570px;
+  height: 340px;
+  margin: 60px auto 0;
+  overflow: hidden;
+}
+
+.about-us-wrapper .about-us .about-us__carousel--container {
+  width: 820px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.about-us-wrapper .about-us .about-us__carousel--item {
+  position: relative;
+  float: left;
+  display: block;
+  width: 110px;
+  opacity: 0.6;
+  list-style: none;
+  margin: 0 35px;
+}
+
+.about-us-wrapper .about-us .about-us__carousel--item img {
+  width: 100%;
+}
+
+.about-us-wrapper .about-us .about-us__carousel .active {
+  width: 140px;
+  opacity: 1;
+}
+
+.about-us-wrapper .about-us .about-us__carousel .active .text {
+  display: block;
+  width: 565px;
+  position: absolute;
+  right: -155%;
+  font-family: "Lora";
+  font-size: 24px;
+  color: #3a3f4b;
+}
+
+.about-us-wrapper .about-us .about-us__carousel .text {
+  display: none;
+}
+
+.contact-us-wrapper {
+  width: 100%;
+  padding: 75px 0 90px;
+  background-color: #3b404c;
+}
+
+.contact-us-wrapper .contact-us__info--section-header {
+  margin-bottom: 115px;
+  font-family: "Lora Bold";
+  font-size: 33px;
+  color: white;
+}
+
+.contact-us-wrapper .contact-us__info--header {
+  font-family: "Open Sans Semibold";
+  font-size: 24px;
+  color: white;
+}
+
+.contact-us-wrapper .contact-us__info--text {
+  display: block;
+  margin-bottom: 56px;
+  margin-top: 25px;
+  font-size: 18px;
+  font-family: "Open Sans Regular";
+  color: #999999;
+  line-height: 1.5em;
+}
+
+.contact-us-wrapper .contact-us__info--text a {
+  display: block;
+  font-size: 18px;
+  font-family: "Open Sans Regular";
+  color: #999999;
+}
+
+.contact-us-wrapper .contact-us__site-nav {
+  margin-bottom: 100px;
+}
+
+.contact-us-wrapper .contact-us__site-nav--link {
+  padding: 10px;
+  font-size: 21px;
+  font-family: "Open Sans Regular";
+  color: white;
+}
+
+.contact-us-wrapper .contact-us__form--input-name {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: "Open Sans Regular";
+  color: white;
+}
+
+.contact-us-wrapper .contact-us__form--input {
+  width: 80%;
+  height: 35px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #7a7b7f;
+  font-size: 21px;
+  font-family: "Open Sans Regular";
+  color: white;
+}
+
+.contact-us-wrapper .contact-us__form--input:focus {
+  border-bottom: 1px solid #00a5ff;
+}
+
+.contact-us-wrapper .contact-us__form .message-box {
+  margin-top: 55px;
+}
+
+.contact-us-wrapper .contact-us__form .message {
+  width: 100%;
+  height: auto !important;
+}
+
+.contact-us-wrapper .contact-us__form--submit-btn {
+  width: 280px;
+  height: 70px;
+  margin-top: 60px;
+  font-size: 25px;
+  font-family: "Open Sans Regular";
+  color: white;
+  border: none;
+  -webkit-border-radius: 45px;
+          border-radius: 45px;
+  background-color: #00a5ff;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.footer-wrapper {
+  width: 100%;
+  background-color: white;
+}
+
+.footer-wrapper .footer {
+  height: 90px;
+}
+
+.footer-wrapper .footer__autor--name {
+  font-size: 13px;
+  font-family: "Montserrat";
+  color: #999999;
+  line-height: 90px;
+}
+
+.footer-wrapper .footer__socialnav--link {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 30px 5px 0 5px;
+  background-image: url("../img/socials-sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.footer-wrapper .footer__socialnav .twitter {
+  background-position: -42px 0;
+}
+
+.footer-wrapper .footer__socialnav .pinterest {
+  background-position: -84px 0;
+}
+
+.footer-wrapper .footer__socialnav .linkdn {
+  background-position: -126px 0;
 }

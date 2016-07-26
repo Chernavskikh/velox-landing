@@ -200,6 +200,7 @@ h1,h2,h3,h4,h5,p,span,a{
 			font-size: 42px;
 	  	    font-family: $lora-bold;
 	  		color: rgb(58, 63, 75);
+	  		text-transform: uppercase;
 		}
 		&--line{
 				display: inline-block;
@@ -259,9 +260,11 @@ h1,h2,h3,h4,h5,p,span,a{
 	.about-us{
 		&__header{
 			&--h2{
+			padding-top: 70px;
 			font-size: 42px;
 	  	    font-family: $lora-bold;
 	  		color: rgb(58, 63, 75);
+	  		text-transform: uppercase;
 		}
 		&--line{
 				display: inline-block;
@@ -270,6 +273,196 @@ h1,h2,h3,h4,h5,p,span,a{
 				background-color: rgb(0, 165, 255);
 			}
 		}
+		.carousel-wrapper{
+			position: relative;
+			.right-arr,.left-arr{
+					position: absolute;
+					top:50%;
+					width: 15px;
+					height: 30px;
+					background-image: url('../img/arrows.png');
+					background-repeat: no-repeat;
+					cursor: pointer;
+				}
+			.left-arr{
+				left: 0;
+			}
+			.right-arr{
+				right: 0;
+				background-position: 0 -30px;
+			}
+		}
+		.about-us{
+			&__carousel{
+				position: relative;
+				width: 570px;
+				height: 340px;
+				margin: 60px auto 0;
+				overflow: hidden;
+				
+				&--container{
+					width: 820px;
+					position: relative;
+					margin: 0;
+					padding: 0;
+				}
+				&--item{
+					position: relative;
+					float: left;
+					display: block;
+					width:110px;
+					opacity: 0.6;
+					list-style: none;
+					margin: 0 35px;
+
+				}
+				&--item img{
+					width: 100%;
+				}
+				.active{
+					width: 140px;
+					opacity: 1;
+				}
+				.active .text{
+					display: block;
+					width: 565px;
+					position: absolute;
+					right: -155%;
+					font-family: $lora;
+					font-size: 24px;
+					color: rgb(58, 63, 75);
+				}
+				.text{
+					display: none; 
+				}
+			}
+		}
 	}
+}
+.contact-us-wrapper{
+	width: 100%;
+	padding: 75px 0 90px;
+	background-color: rgb(59, 64, 76);
+	.contact-us{
+		&__info{
+			&--section-header{
+				margin-bottom: 115px;
+				font-family: $lora-bold;
+				font-size: 33px;
+				color: rgb(255, 255, 255);
+			}
+			&--header{
+				font-family: $opensans-semi;
+				font-size: 24px;
+				color: rgb(255, 255, 255);
+			}
+			&--text{
+				 display: block;
+				 margin-bottom: 56px;
+				 margin-top: 25px;
+				 font-size: 18px;
+			     font-family: $opensans;
+			     color: rgb(153, 153, 153);
+			     line-height: 1.5em;
+
+			}
+			&--text a{
+				display: block;
+				font-size: 18px;
+			     font-family: $opensans;
+			     color: rgb(153, 153, 153);
+
+			}
+		}
+		&__site-nav{
+			margin-bottom: 100px;
+			&--link{
+				padding: 10px;
+				font-size: 21px;
+				font-family: $opensans;
+				color: rgb(255, 255, 255);
+
+			}
+		}
+		&__form{
+			&--input-name{
+				display: block;
+				margin-bottom: 20px;
+				font-size: 20px;
+			    font-family: $opensans;
+			    color: rgb(255, 255, 255);
+			}
+			&--input{
+				width: 80%;
+				height: 35px;
+				background: none;
+				border: none;
+				border-bottom: 1px solid rgb(122, 123, 127);
+				font-size: 21px;
+				font-family: $opensans;
+				color: rgb(255, 255, 255);
+			}
+			&--input:focus{
+				border-bottom: 1px solid rgb(0, 165, 255);
+			}
+			.message-box{
+				margin-top: 55px;
+			}
+			.message{
+				width: 100%;
+				height: auto!important;
+			}
+			&--submit-btn{
+				width: 280px;
+ 			    height: 70px;
+ 			    margin-top: 60px;
+				font-size: 25px;
+  				font-family: $opensans;
+  				color: rgb(255, 255, 255);
+				border: none;
+				border-radius: 45px;
+				background-color: rgb(0, 165, 255);
+  				box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+
+			}
+
+		}
+	}
+}
+.footer-wrapper{
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+		.footer{
+			height: 90px;
+			&__autor{
+				&--name{
+					font-size: 13px;
+				    font-family: $montserrat;
+				    color: rgb(153, 153, 153);	
+				    line-height: 90px;
+				}
+
+			}
+			&__socialnav{
+				&--link{
+					display: inline-block;
+					width: 30px;
+					height: 30px;
+					margin: 30px 5px 0 5px;
+					background-image: url('../img/socials-sprite.png');
+					background-repeat: no-repeat;
+					background-position: 0 0;
+				}
+				.twitter{
+					background-position: -42px 0;
+				}
+				.pinterest{
+					background-position: -84px 0;
+				}
+				.linkdn{
+					background-position: -126px 0;
+				}
+			}
+		}
 }
 
