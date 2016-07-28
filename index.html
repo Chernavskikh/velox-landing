@@ -24,11 +24,11 @@
   <div class="container">
       <header class="header">
         <div class="row">
-          <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 header__logo">
+          <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12 header__logo">
             <img src="img/logo.png" alt="logo.png" class="header__logo--img">
           </div>
 
-          <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+          <div class="col-lg-7 col-md-7 col-sm-8 col-xs-12">
               <nav class="header__nav ">
                 <a href="#services" class="header__nav--link">Services</a>
                 <a href="#portfolio" class="header__nav--link">Portfolio</a>
@@ -206,16 +206,16 @@
         <div class="about-us__carousel">
             <ul class="about-us__carousel--container">
                 <li class="about-us__carousel--item">
-                <img src="https://iflipclothesdotcom.files.wordpress.com/2015/11/profile-picture-rounded.jpg" alt="">
-                <p class="text">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ”</p>
+                  <img src="img/slide1.png" alt="">
+                  <p class="text">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ”</p>
                 </li>
                 <li class="about-us__carousel--item active">
-                <img src="https://iflipclothesdotcom.files.wordpress.com/2015/11/profile-picture-rounded.jpg" alt="">
-                <p class="text">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ”</p>
+                    <img src="img/slide2.png" alt="">
+                    <p class="text">“Exercitationem blanditiis veniam facilis atque consequatur repudiandae praesentium nam ”</p>
                 </li>
                 <li class="about-us__carousel--item">
-                <img src="https://iflipclothesdotcom.files.wordpress.com/2015/11/profile-picture-rounded.jpg" alt="">
-                <p class="text">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ”</p>
+                    <img src="img/slide3.png" alt="">
+                    <p class="text">“blanditiis veniam facilis atque consequatur repudiandae praesentium nam, totam eos dolores iure vel voluptatibus quam labore molestiae sed et odit accusamus ”</p>
                 </li>
             </ul>
         </div>
@@ -278,7 +278,6 @@
                 <input type="submit" value="Send Message" class="contact-us__form--submit-btn"/>
             </div>
             </form>
-
         </div>
       </div>
     </div>
@@ -307,14 +306,16 @@
 
     var rightBtn = $('.right-arr');
     var leftBtn = $('.left-arr');
-    var currentLeftValue = 0;
+    var container = $('.about-us__carousel--container');
+    var last = $('.about-us__carousel--container li:last');
+    var first = $('.about-us__carousel--container li:first');
+
     
 
    rightBtn.click(function(){
-
-        currentLeftValue += 175;
-        $('.about-us__carousel--container').animate({ left : currentLeftValue + "px"}, 500);  
-
+        var rightClone = $('.about-us__carousel--container li:last').clone();
+        $('.about-us__carousel--container li:last').remove();
+        $('.about-us__carousel--container li:first').before(rightClone);
 
         if($(".active").prev().is("li")){
           $(".active").removeClass("active").prev().addClass("active");
@@ -327,8 +328,9 @@
 
    leftBtn.click(function(){
     
-      currentLeftValue -= 175;
-        $('.about-us__carousel--container').animate({ left : currentLeftValue + "px"}, 500);   
+        var leftClone = $('.about-us__carousel--container li:first').clone();
+        $('.about-us__carousel--container li:first').remove();
+        $('.about-us__carousel--container li:last').before(leftClone); 
 
 
         if($(".active").next().is("li")){
@@ -341,7 +343,14 @@
   });
  });
 
-
+</script>
+<script type="text/javascript">
+jQuery(function(f){
+    var element = f('#portfolio');
+    f(window).scroll(function(){
+        element['fade'+ (f(this).scrollTop() > 200 ? 'In': 'Out')](400);           
+    });
+});
 </script>
 </body>
 </html>
