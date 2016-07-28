@@ -316,7 +316,7 @@ h1, h2, h3, h4, h5, p, span, a {
     margin-top: 55px; }
   .contact-us-wrapper .contact-us__form .message {
     width: 100%;
-    height: auto !important; }
+    height: 100%; }
   .contact-us-wrapper .contact-us__form--submit-btn {
     width: 280px;
     height: 70px;
@@ -355,6 +355,53 @@ h1, h2, h3, h4, h5, p, span, a {
       background-position: -126px 0; }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .header-bg {
-    height: 714px;
-    background-image: none; } }
+  .header__nav--link {
+    margin-left: 25px !important; }
+  .about-us-wrapper .about-us .carousel-wrapper .right-arr,
+  .about-us-wrapper .about-us .carousel-wrapper .left-arr {
+    top: 25%; }
+  .contact-us-wrapper .contact-us__info--section-header {
+    margin-bottom: 50px;
+    font-size: 32px; }
+  .contact-us-wrapper .contact-us__info--header {
+    font-size: 22px; }
+  .contact-us-wrapper .contact-us__site-nav--link {
+    font-size: 20px; }
+  .contact-us-wrapper .contact-us__form--input {
+    margin-bottom: 20px; }
+  .contact-us-wrapper .contact-us__form--input-name {
+    margin: 0; }
+  .contact-us-wrapper .contact-us__form--input {
+    margin-bottom: 30px;
+    width: 100%; }
+  .contact-us-wrapper .contact-us__form .message {
+    height: 100px; }
+  .contact-us-wrapper .contact-us__form--submit-btn {
+    margin-top: 0;
+    width: 250px;
+    height: 60px; } }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .header-bg .header__logo {
+    text-align: center; }
+  .header-bg .header__nav {
+    float: none;
+    margin: 15px auto;
+    text-align: center; }
+    .header-bg .header__nav--link {
+      margin: 0;
+      padding: 10px;
+      display: block;
+      font-size: 23px; }
+  .header-bg .header__main {
+    margin: 0; }
+    .header-bg .header__main--h1 {
+      margin-top: 25px;
+      font-size: 36px; }
+    .header-bg .header__main--text {
+      margin: 25px;
+      font-size: 20px; }
+    .header-bg .header__main--btn {
+      width: 250px;
+      height: 60px;
+      font-size: 23px; } }
